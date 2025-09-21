@@ -187,7 +187,7 @@ def main():
                 # Prepare context for LLM
                 context_data = results[["title", "number", "start", "end", "text"]].to_json(orient="records")
                 
-                prompt = f'''I am teaching web development in my Sigma web development course. Here are video subtitle chunks containing video title, video number, start time in seconds, end time in seconds, the text at that time:
+                prompt = f'''I am teaching Python in my Data Science course. Here are video subtitle chunks containing video title, video number, start time in seconds, end time in seconds, the text at that time:
 
 {context_data}
 ---------------------------------
@@ -255,7 +255,7 @@ User asked this question related to the video chunks, you have to answer in a hu
     st.markdown(
         """
         <div style='text-align: center; color: #6b7280;'>
-            🎓 Sigma Web Development Course Q&A System<br>
+            🎓 Python For Data Science Course Q&A System<br>
             Powered by Ollama and Streamlit
         </div>
         """, 
